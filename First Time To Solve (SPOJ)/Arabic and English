@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    // #ifndef ONLINE_JUDGE
+    // // for getting input from input.txt
+    // freopen("input.txt", "r", stdin);
+    // // for writing output to output.txt
+    // freopen("out.txt", "w", stdout);
+    // #endif
+    
+    int N;
+    cin>>N;
+    while(N--){
+        int n;
+        cin>>n;
+        vector<string> v;
+        int flag=0,pos=0;
+        for(int i=0;i<n;i++){
+            string temp;
+            cin>>temp;
+            v.push_back(temp);
+            if(v[i][0]>='a'){
+                flag=1;
+                pos=i;
+            }
+        }
+        if(flag==1){
+            for(int i=pos+1;i<n;i++){
+                cout<<v[i]<<" ";            
+            }
+            cout<<v[pos]<<" ";
+            for(int i=0;i<pos;i++){
+                cout<<v[i]<<" ";
+            }
+        }
+        else{
+            for(int i=0;i<n;i++){
+                cout<<v[i]<<" ";
+            }
+        }
+        flag=0;
+        cout<<"\n";
+    }
+        
+    return 0;
+}
