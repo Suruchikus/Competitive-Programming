@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    // #ifndef ONLINE_JUDGE
+    // // for getting input from input.txt
+    // freopen("input.txt", "r", stdin);
+    // // for writing output to output.txt
+    // freopen("out.txt", "w", stdout);
+    // #endif
+    
+    string s;
+    cin>>s;
+    string temp="";
+    for(int i=0;i<s.length();i++){
+        if(s[i]!='+'){
+            temp=temp+s[i];
+        }
+    }
+
+    sort(temp.begin(),temp.end());
+
+    int j=0;
+    for(int i=0;i<s.length();i=i+2){
+        s[i]=temp[j];
+        j++;
+    }
+    cout<<s<<"\n";
+    return 0;
+}
