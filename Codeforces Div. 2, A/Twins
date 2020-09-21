@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    // #ifndef ONLINE_JUDGE
+    // // for getting input from input.txt
+    // freopen("input.txt", "r", stdin);
+    // // for writing output to output.txt
+    // freopen("out.txt", "w", stdout);
+    // #endif
+    
+    int n;
+    cin>>n;
+    int arr[n];
+    int sum=0;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        sum=sum+arr[i];
+    }
+    sort(arr,arr+n);
+    reverse(arr,arr+n);
+    sum=sum/2;
+    int countsum=0;
+    int count=0;
+    int i=0;
+    while(countsum<=sum && i<n){
+        countsum+=arr[i];
+        count++;
+        i++;
+    }
+    cout<<count<<"\n";
+    return 0;
+}
