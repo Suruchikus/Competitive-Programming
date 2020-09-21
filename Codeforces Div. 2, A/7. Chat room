@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    // #ifndef ONLINE_JUDGE
+    // // for getting input from input.txt
+    // freopen("input.txt", "r", stdin);
+    // // for writing output to output.txt
+    // freopen("out.txt", "w", stdout);
+    // #endif
+    
+    string s;
+    cin>>s;
+    string cmp="hello";
+    int count=0;
+    int n=s.length();
+        int j=0;
+        for(int i=0;i<n;i++){
+            if(s[i]==cmp[j]){
+                count++;
+                j++;
+            }
+            if(count==5){
+                break;
+            }
+        }
+        if(count==5){
+            cout<<"YES"<<"\n";
+        }
+        else{
+            cout<<"NO"<<"\n";
+        }
+    return 0;
+}
