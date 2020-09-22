@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    // #ifndef ONLINE_JUDGE
+    // // for getting input from input.txt
+    // freopen("input.txt", "r", stdin);
+    // // for writing output to output.txt
+    // freopen("out.txt", "w", stdout);
+    // #endif
+    
+    int n;
+    cin>>n;
+    int flag=false;
+    int arr[12]={4,7,44,47,74,77,444,447,477,777,774,744};
+    for(int i=0;i<12;i++){
+        if(n%arr[i]==0){
+            flag=true;
+        }
+    }
+    if(flag==true){
+        cout<<"YES"<<"\n";
+    }
+    else{
+        cout<<"NO"<<"\n";
+    }
+    return 0;
+}
