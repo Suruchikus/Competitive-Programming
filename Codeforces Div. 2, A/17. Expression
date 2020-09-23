@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    // #ifndef ONLINE_JUDGE
+    // // for getting input from input.txt
+    // freopen("input.txt", "r", stdin);
+    // // for writing output to output.txt
+    // freopen("out.txt", "w", stdout);
+    // #endif
+    
+    int a,b,c;
+    cin>>a>>b>>c;
+    int sum=0;
+    int maxsum=INT_MIN;
+    sum=a+b+c;
+    maxsum=max(maxsum,sum);
+    sum=a+b*c;
+    maxsum=max(maxsum,sum);
+    sum=a*(b+c);
+    maxsum=max(maxsum,sum);
+    sum=a*b*c;
+    maxsum=max(maxsum,sum);
+    sum=(a+b)*c;
+    maxsum=max(maxsum,sum);
+    cout<<maxsum<<"\n";
+    return 0;
+}
