@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    // #ifndef ONLINE_JUDGE
+    // // for getting input from input.txt
+    // freopen("input.txt", "r", stdin);
+    // // for writing output to output.txt
+    // freopen("out.txt", "w", stdout);
+    // #endif
+    
+    long long n,k;
+    cin>>n>>k;
+    long long mid;
+    if(n%2==0){
+        mid=n/2;
+    }
+    else{
+        mid=(n/2)+1;
+    }
+    if(k<=mid){
+        cout<<k*2-1<<"\n";
+    }
+    else{
+        cout<<(k-mid)*2<<"\n";
+    }
+    return 0;
+}
