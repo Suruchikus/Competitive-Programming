@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    // #ifndef ONLINE_JUDGE
+    // // for getting input from input.txt
+    // freopen("input.txt", "r", stdin);
+    // // for writing output to output.txt
+    // freopen("out.txt", "w", stdout);
+    // #endif
+    int T;
+    cin>>T;
+    while(T--){
+        int n,x;
+        cin>>n>>x;
+        if(n<=2){
+            cout<<1<<"\n";
+        }
+        else{
+            n=n-2;
+            if(n%x==0){
+                n=n/x;
+            }
+            else{
+                n=(n/x)+1;
+            }
+            cout<<n+1<<"\n";
+        }
+    }
+    return 0;
+}
