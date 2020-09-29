@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    // #ifndef ONLINE_JUDGE
+    // // for getting input from input.txt
+    // freopen("input.txt", "r", stdin);
+    // // for writing output to output.txt
+    // freopen("out.txt", "w", stdout);
+    // #endif
+    int flag=0;
+    do{
+        int a;
+        cin>>a;
+        if(a!=42){
+            cout<<a<<"\n";
+        }
+        else{
+            flag=1;
+        }
+    } while(flag==0);
+    return 0;
+}
